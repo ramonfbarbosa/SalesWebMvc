@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using webmvc.Models;
 using webmvc.Data;
+using webmvc.Services;
 
 namespace webmvc
 {
@@ -42,6 +43,7 @@ namespace webmvc
                         builder.MigrationsAssembly("webmvc")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
